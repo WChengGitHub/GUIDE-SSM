@@ -11,7 +11,7 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
     <!--上面的xsd最好和当前使用的Spring版本号一致,如果换了Spring版本,这个最好也跟着改-->
-
+    <import resource="applicationContext-dataSource.xml"/>
     <!-- Druid 和 Spring 关联监控配置 start-->
     <!-- 具体可以查阅官网：https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_Druid%E5%92%8CSpring%E5%85%B3%E8%81%94%E7%9B%91%E6%8E%A7%E9%85%8D%E7%BD%AE-->
     <bean id="druid-stat-interceptor" class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor" />
@@ -27,7 +27,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
     <aop:config proxy-target-class="true">
         <!-- pointcut-ref="druid-stat-pointcut" 这个报红没事-->
-        <aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="druid-stat-pointcut" />
+        <!--<aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="druid-stat-pointcut" />-->
     </aop:config>
     <!-- Druid 和 Spring 关联监控配置 end-->
 
