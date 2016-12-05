@@ -12,4 +12,5 @@
 <%
     String webRoot = "http://" + request.getServerName() + ":" + request.getServerPort();
     request.setAttribute("webRoot",webRoot);
+//    out.println(webRoot);
 %>

@@ -335,7 +335,12 @@
             <version>${commons-lang3.version}</version>
         </dependency>
 
-
+        <!--spider爬虫工具包-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.4</version>
+        </dependency>
     </dependencies>
     <!--架包依赖 end-->
 

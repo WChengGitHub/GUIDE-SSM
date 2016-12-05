@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
-<%@ include file="/WEB-INF/view/common/tagPage.jsp" %>
+<%--<%@ include file="/WEB-INF/view/common/tagPage.jsp" %>--%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -24,7 +24,8 @@
 <br>
 
 <a href="/sysUserController/showUserToJSONById/1" target="_blank">查询用户信息并直接输出JSON数据</a>
-
+<a href="/index.html" target="_blank">aaaaaaa</a>
+<input value="button" type="button" onclick="">
 
 </body>
 </html>
