@@ -355,6 +355,14 @@
             <artifactId>htmlunit</artifactId>
             <version>2.14</version>
         </dependency>
+
+
+        <!--selenium动态-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.33.0</version>
+        </dependency>
     </dependencies>
     <!--架包依赖 end-->
 
