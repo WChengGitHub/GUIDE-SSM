@@ -341,6 +341,20 @@
             <artifactId>httpclient</artifactId>
             <version>4.4</version>
         </dependency>
+
+        <!--html解析-->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+
+        <!-- htmlunit动态-->
+        <dependency>
+            <groupId>net.sourceforge.htmlunit</groupId>
+            <artifactId>htmlunit</artifactId>
+            <version>2.14</version>
+        </dependency>
     </dependencies>
     <!--架包依赖 end-->
 

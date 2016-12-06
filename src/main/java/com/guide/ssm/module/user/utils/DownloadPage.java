@@ -66,8 +66,8 @@ public class DownloadPage
         return content;
     }
 
-//    public static void main(String[] args) {
-//        System.out.println(getContentFormUrl("http://acm.fzu.edu.cn/log.php"));
-//    }
+    public static void main(String[] args) {
+        System.out.println(DownloadPage.getContentFormUrl("http://vjudge.net/contest/128714#overview"));
+    }
 
 }
