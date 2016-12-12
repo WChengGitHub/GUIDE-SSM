@@ -3,7 +3,7 @@
         "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-    
+
     <!--mybatis生成工具的帮助文档可以看：-->
     <!--英文：http://www.mybatis.org/generator/usage/mysql.html-->
     <!--中文：http://www.mybatis.tk/-->
@@ -11,7 +11,7 @@
 
     <properties resource="properties/config.properties"></properties>
     <!--指定特定数据库的jdbc驱动jar包的位置 -->
-    <classPathEntry location="${jdbc.driverLocation}"/>
+    <!--<classPathEntry location="${jdbc.driverLocation}"/>-->
 
     <context id="default" targetRuntime="MyBatis3">
 
@@ -23,7 +23,8 @@
 
 
         <!--jdbc的数据库连接 -->
-        <jdbcConnection driverClass="${jdbc.driverClass}" connectionURL="${jdbc.connectionURL}" userId="${jdbc.userId}" password="${jdbc.password}">
+        <jdbcConnection driverClass="${jdbc.driverClass}" connectionURL="${jdbc.connectionURL}"
+                        userId="${jdbc.userId}" password="${jdbc.password}">
         </jdbcConnection>
 
 
@@ -37,7 +38,8 @@
             targetPackage     指定生成的model生成所在的包名
             targetProject     指定在该项目下所在的路径
         -->
-        <javaModelGenerator targetPackage="com.youmeek.ssm.module.user.pojo" targetProject="${java.targetProject}">
+        <javaModelGenerator targetPackage="com.guide.ssm.module.user.pojo"
+                            targetProject="${java.targetProject}">
             <!-- 是否对model添加 构造函数 -->
             <property name="constructorBased" value="true"/>
 
@@ -65,7 +67,8 @@
                 type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
                 type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
         -->
-        <javaClientGenerator targetPackage="com.youmeek.ssm.module.user.mapper" targetProject="${java.targetProject}" type="MIXEDMAPPER">
+        <javaClientGenerator targetPackage="com.guide.ssm.module.user.mapper"
+                             targetProject="${java.targetProject}" type="MIXEDMAPPER">
             <property name="enableSubPackages" value=""/>
             <!--
                     定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：
