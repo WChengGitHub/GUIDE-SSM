@@ -5,32 +5,42 @@
     <title>Title</title>
     <script src="/js/jQuery-core/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
-        window.onload = function () {
+        $(function(){
+        $("#getInfo").click(function(){
+            var data = {};
+            data["vid"]=$("#vid").val();
             $.ajax({
-                url:"/getPageController/getIndexPage/",
-                type:"GET",
+                url:"/VisitorController/showVisitorToById",
+                type: "POST",
                 dataType: "json",
-                success:function (data) {
-                    var d = data.data;
-//                  alert(d);
-                    var $div = $("#nopadding");
-                    $($div[0]).html(d);
-                    $("#nopadding").show();
-
+                data: data,
+                success:function (visitor) {
+                    var name = visitor.visitor;
+                    $("#visitor").val(name);
+                    var telephone = visitor.telephone;
+                    $("#telephone").val(telephone);
+                    var password = visitor.password;
+                    $("#password").val(password);
+                    var gender = visitor.gender;
+                    $("#gender").val(gender);
+                    var email = visitor.email;
+                    $("#email").val(email);
                 }
             });
-
-        }
-
+        });
+        });
     </script>
 
 </head>
 <body>
 
-
-
-<div class="row" id="nopadding" style="display:none">
-</div>
+<input type="text" id="vid" value="1111">
+<input type="button" id="getInfo" value="get">
+<input type="text" id="visitor">
+<input type="text" id="telephone">
+<input type="text" id="password">
+<input type="text" id="gender">
+<input type="text" id="email">
 
 
 </body>
