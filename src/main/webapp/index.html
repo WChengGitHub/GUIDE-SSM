@@ -5,29 +5,29 @@
     <title>Title</title>
     <script src="/js/jQuery-core/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
-        $(function(){
-        $("#getInfo").click(function(){
-            var data = {};
-            data["vid"]=$("#vid").val();
-            $.ajax({
-                url:"/VisitorController/showVisitorToById",
-                type: "POST",
-                dataType: "json",
-                data: data,
-                success:function (visitor) {
-                    var name = visitor.visitor;
-                    $("#visitor").val(name);
-                    var telephone = visitor.telephone;
-                    $("#telephone").val(telephone);
-                    var password = visitor.password;
-                    $("#password").val(password);
-                    var gender = visitor.gender;
-                    $("#gender").val(gender);
-                    var email = visitor.email;
-                    $("#email").val(email);
-                }
+        $(function () {
+            $("#getInfo").click(function () {
+                var data = {};
+                data["vid"] = $("#vid").val();
+                $.ajax({
+                    url: "/VisitorController/showVisitorToById",
+                    type: "POST",
+                    dataType: "json",
+                    data: data,
+                    success: function (visitor) {
+                        var name = visitor.visitor;
+                        $("#visitor").val(name);
+                        var telephone = visitor.telephone;
+                        $("#telephone").val(telephone);
+                        var password = visitor.password;
+                        $("#password").val(password);
+                        var gender = visitor.gender;
+                        $("#gender").val(gender);
+                        var email = visitor.email;
+                        $("#email").val(email);
+                    }
+                });
             });
-        });
         });
     </script>
 

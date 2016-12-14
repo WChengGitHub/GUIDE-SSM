@@ -13,7 +13,7 @@
     <!--指定特定数据库的jdbc驱动jar包的位置 -->
     <!--<classPathEntry location="${jdbc.driverLocation}"/>-->
 
-    <context id="default" targetRuntime="MyBatis3">
+    <context id="default" targetRuntime="MyBatis3simple">
 
 
         <!-- optional，旨在创建class时，对注释进行控制 -->
@@ -68,7 +68,7 @@
                 type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
         -->
         <javaClientGenerator targetPackage="com.guide.ssm.module.user.mapper"
-                             targetProject="${java.targetProject}" type="MIXEDMAPPER">
+                             targetProject="${java.targetProject}" type="XMLMAPPER">
             <property name="enableSubPackages" value=""/>
             <!--
                     定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：

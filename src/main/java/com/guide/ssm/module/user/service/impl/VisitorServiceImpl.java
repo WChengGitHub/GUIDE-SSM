@@ -16,7 +16,6 @@ public class VisitorServiceImpl implements VisitorService{
 
 	@Override
 	public TbVisitor getById(String id) {
-		System.out.println("SysUserServiceImpl");
 		return tbVisitorMapper.selectByPrimaryKey(id);
 	}
 }
